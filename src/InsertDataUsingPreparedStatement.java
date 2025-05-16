@@ -1,0 +1,36 @@
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+
+public class InsertDataUsingPreparedStatement {
+    private static final String url=DBConfig.getUrl();
+    private static final String username=DBConfig.getUsername();
+    private static final String password=DBConfig.getPassword();
+
+    public static void main(String[] args) {
+        try{
+            Class.forName("com.mysql.cj.jdbc.Driver");
+        } catch (ClassNotFoundException e){
+            System.out.println(e.getMessage());
+        }
+
+        try{
+            Connection connection= DriverManager.getConnection(url,username,password);
+            String query="INSERT INTO students(name, age, marks) VALUES(?,?,?)";
+            PreparedStatement preparedStatement=connection.prepareStatement(query);
+            preparedStatement.setString(1,"Ariz Mahtab");
+            preparedStatement.setInt(2,25);
+            preparedStatement.setDouble(3,84.7);
+
+            int rowsAffected=preparedStatement.executeUpdate();
+            if(rowsAffected>0)
+                System.out.println("Data inserted successfully.");
+            else
+                System.out.println("Data not inserted.");
+        } catch (SQLException e){
+            System.out.println(e.getMessage());
+        }
+    }
+
+}
