@@ -15,7 +15,7 @@ This project demonstrates various JDBC (Java Database Connectivity) operations u
   - **UpdateData.java**: Updates data in the students table.
   - **DeleteData.java**: Deletes data from the students table.
   - **RetrieveData.java**: Retrieves data from the students table.
-  - **CallableStatementDemo**: Using CallableStatement to Execute Stored Procedures.
+  - **CallableStatementDemo.java**: Using CallableStatement to Execute Stored Procedures.
   - **InsertDataUsingPreparedStatement.java**: Inserts data using PreparedStatement.
   - **UpdateDataUsingPreparedStatement.java**: Updates data using PreparedStatement.
   - **DeleteDataUsingPreparedStatement.java**: Deletes data using PreparedStatement.
@@ -23,6 +23,7 @@ This project demonstrates various JDBC (Java Database Connectivity) operations u
   - **BatchProcessingDemo.java**: Demonstrates batch processing for inserting data.
   - **BatchProcessingUsingPreparedStatement.java**: Demonstrates batch processing using PreparedStatement.
   - **TransactionHandlingDemo.java**: Demonstrates transaction handling for account transfers.
+  - **StudentInOutDemo.java**: Handling IN, OUT, and INOUT Parameters in Stored Procedures.
 
 ## Prerequisites
 - Java Development Kit (JDK) installed.
